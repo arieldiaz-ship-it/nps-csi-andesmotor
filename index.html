@@ -5,57 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal de Reportes Andes Motor</title>
     <style>
-        /* 1. Normalización básica para evitar scrollbars dobles */
+        /* Reseteo básico para que ocupe toda la pantalla */
         body, html { 
             margin: 0; 
             padding: 0; 
             height: 100%; 
             width: 100%;
-            overflow: hidden; /* IMPORTANTE: Oculta lo que cortamos */
-            background-color: #f0f2f5; /* Color de fondo por si algo carga lento */
+            overflow: hidden; /* Evita barras de desplazamiento dobles */
         }
         
-        /* 2. Contenedor para controlar el recorte */
-        .iframe-container {
-            position: absolute;
+        iframe { 
+            display: block;
             width: 100%;
             height: 100%;
-            overflow: hidden;
-        }
-
-        /* 3. El Iframe y su lógica responsiva */
-        iframe { 
-            width: 100%;
             border: none;
-            position: relative;
-            
-            /* --- CONFIGURACIÓN PARA ESCRITORIO (Desktop) --- */
-            /* La barra suele ser de una línea (~24px) */
-            top: -5px; 
-            height: calc(100% + 5px); 
-        }
-
-        /* 4. MEDIA QUERY: Reglas solo para Móviles (Pantallas < 768px) */
-        @media (max-width: 768px) {
-            iframe {
-                /* En móviles el texto de Google suele ocupar 2 líneas (~48px) */
-                top: -48px; 
-                height: calc(100% + 48px);
-            }
-        }
-        
-        /* 5. Ajuste fino para pantallas MUY pequeñas o iPhone antiguo */
-        @media (max-width: 380px) {
-            iframe {
-                top: -55px; /* Por si acaso ocupa 3 líneas */
-                height: calc(100% + 55px);
-            }
         }
     </style>
 </head>
 <body>
-    <div class="iframe-container">
-        <iframe src="https://script.google.com/macros/s/AKfycbx3EkexYDyexqJXqTwX-AU87IB6TlhtsKoaDDTEgp6vBRzs39s6cB-dsuNZ40I7L4Tg/exec"></iframe>
-    </div>
+    <iframe src="https://script.google.com/macros/s/AKfycbx3EkexYDyexqJXqTwX-AU87IB6TlhtsKoaDDTEgp6vBRzs39s6cB-dsuNZ40I7L4Tg/exec"></iframe>
 </body>
 </html>
